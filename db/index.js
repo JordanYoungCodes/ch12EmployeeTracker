@@ -1,30 +1,16 @@
 const {Pool} = require('pg');
 
-
+// wE iNTIALIZE A iNSTANCE OF OUR db
 const pool = new Pool({
     host: 'localhost',
     port: 5432,
     user: 'postgres',
-    password: 'Timeflys1978',
+    password: 'jordan',
     database: "employee_track",
-})
-
-const dbEmployeeTrack = {
-
-    slectAllEmployees() {
-        console.log('selecting employees...');
-    },
-
-    createEmployee(employee = {}) {
-        console.log('creating employee...');
-        let query = 'INSERT INTO employee ?'
-
-        pool.query(query).then((result) => {
-            console.log(result)
-        })
-    },
-}
+});
+// we MAKE THE CONNECTION
+pool.connect()
 
 
-module.exports = dbEmployeeTrack
+module.exports = pool;
 

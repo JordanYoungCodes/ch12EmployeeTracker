@@ -5,13 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node db/seeds.sql"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "asciiart-logo": "^0.2.7",
+    "express": "^4.19.2",
     "inquirer": "^8.2.4",
     "pg": "^8.12.0"
   }

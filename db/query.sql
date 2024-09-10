@@ -1,0 +1,1 @@
+SELECT employee.id, employee.first_name, employee.last_name, role.title, role.salary, CONCAT(manager_name.first_name, manager_name.last_name) AS manager_name FROM employee JOIN role ON employee.role_id = role.id LEFT JOIN employee manager_name ON manager_name.id = employee.manager_id
